@@ -1,0 +1,118 @@
+/* Header styling */
+
+.navbar {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(7, 6, 6);
+  display: block;
+  color: white;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 16px;
+
+}
+
+
+
+
+
+h3 {
+  text-decoration: none;
+  font-size: 25px;
+  color: #f8f8f8;
+  display: block;
+  cursor: default;
+}
+
+
+
+body {
+  font-family: "Lato", sans-serif;
+
+}
+
+/* left menu style */
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(2, 2, 2);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+/* three menu icon open style */
+span.open {
+  font-size: 40px;
+  cursor: pointer;
+  color: rgb(239, 232, 232);
+  padding-left: 10px;
+
+
+}
+
+  /* three menu icon hover */
+span.open:hover {
+  color: #2e39d1;
+}
+
+ /* left menu style hover*/
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #f8f8f8;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #2e39d1;
+}
+
+
+  /* three menu icon close style */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+
+  .sidenav a {
+    font-size: 18px;
+  }
+
+}
+
+@media screen and (max-width: 450px) {
+  .navbar {
+    min-width: 170vw;
+  }
+
+}
+
+ /* footer styling */
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  background-color: rgb(2, 2, 2);
+  color: white;
+  text-align: center;
+}

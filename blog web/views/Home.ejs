@@ -1,0 +1,42 @@
+<%- include ('layouts/main') %>
+  <!-- Connection of home header -->
+  <%- include ('layouts/hheader') %>
+
+    <body>
+
+
+      <h2 class="text-center mt-3">Bloggers Blog</h2>
+
+      <div class="container my-5">
+        <% if(bloggs !='' ) { %>
+          <% bloggs.forEach((row, index)=> { %>
+            <div>
+              <a href="/show/<%= row.slug %>" style="text-decoration: none; color:black">
+                <div class="card row flex-row-reverse mb-2">
+
+
+                  <img src="<%= row.image %>" class="col-lg-4 card-img-end img-fluid p-0" />
+                  <div class="col-lg-8 card-body">
+
+                    <h2 class="card-title">
+                      <%= row.title %>
+                    </h2>
+                    <h5 class="card-date"><small class="text-muted">
+                        <%= row.createdAt.toDateString() %>
+                      </small></h5>
+                    <h5 class="card-category">
+                      <%= row.category.category %>
+                    </h5>
+                  </div>
+                </div>
+                <% }) %>
+                  <% } %>
+
+              </a>
+
+            </div>
+
+      </div>
+
+
+    </body>

@@ -1,0 +1,62 @@
+<%- include ('layouts/main') %>
+  <!-- Connection of admin header -->
+  <%- include ('layouts/aheader') %>
+    <%- include ('layouts/footer') %>
+
+
+      <body>
+
+
+        <h2 class="text-center">Post Blog</h2>
+        <div class="container">
+          <div class="text-left">
+            <!-- Back all blog page button -->
+            <a class="btn btn-dark mb-2" href="/blog/get"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                fill="currentColor" class="bi bi-chevron-double-left" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M8.354 1.646a.5.5 0 0 1 0 .708L2.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+                <path fill-rule="evenodd"
+                  d="M12.354 1.646a.5.5 0 0 1 0 .708L6.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+              </svg></a>
+          </div>
+
+          <!-- add blog form -->
+
+          <form action="/blog/create" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+              <label for="exampleInputName">Title</label>
+              <pre> <input type="text" name="title" class="form-control" required> </pre>
+
+            </div>
+            <div class="form-group">
+
+              <label for="exampleFormControlSelect1">Category</label>
+              <pre> <select class="form-control" name="category"  id="exampleFormControlSelect1">
+           
+              <% category.forEach((row, index)=> { %>
+                <option value="<%= row._id %>">
+                  <%= row.category %>
+                </option>
+                <% }) %>
+
+            </select> </pre>
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">Description</label>
+              <pre> <textarea class="form-control" name="description" id="exampleFormControlTextarea1" rows="3"></textarea></pre>
+
+            </div>
+
+            <div class="mt-3">
+              <label for="image" class="form-label">Upload images</label>
+              <input class="form-control" type="file" id="formFileMultiple" name="image" multiple>
+            </div>
+
+
+
+
+            <button type="submit" class="btn-block btn btn-success mt-4" <a href=""> Save</button>
+            <a href="/blog" class="btn-block btn btn-danger mt-4">Cancel</a>
+          </form>
+        </div>
+      </body>

@@ -1,0 +1,41 @@
+<link rel="stylesheet" type="text/css" href="/assets/admin.css">
+
+
+<body>
+
+  <div>
+    <!-- Header -->
+    <nav class="navbar" id="header">
+      <a href="" style="text-decoration: none;">
+        <h3>Bloggers Blog</h3>
+      </a>
+    </nav>
+
+
+    <!-- Left Menu -->
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="/blog/get">All Blogs</a>
+      <a href="/addblog/get">Add New Blogs</a>
+      <a href="/category/get">All Categories</a>
+      <a href="/createcat">Add New Category</a>
+      <a href="/login">Log Out</a>
+    </div>
+
+    <!--Three line menu icon -->
+    <span class="open" onclick="openNav()">&#9776;</span>
+
+    <script>
+      // onclick open
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+      }
+      // onclick close
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+    </script>
+  </div>
+
+
+</body>
